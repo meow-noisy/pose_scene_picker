@@ -20,4 +20,4 @@ jobs:
         run: pip install tox
       - name: Run Tox
         # 「PATH」で Python のバージョンを使用して tox を実行する
-        run: tox ut
+        run: tox -e ut
