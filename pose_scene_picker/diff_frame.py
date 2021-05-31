@@ -5,10 +5,21 @@ import numpy as np
 
 
 def pick_pose_frame(
-        movie_file,
-        output_dir,
-        binalization_threshold=30,
-        next_frame_pixel_threshold=20_000):
+        movie_file: str,
+        output_dir: str,
+        binalization_threshold: int = 30,
+        next_frame_pixel_threshold: int = 20_000):
+    """動画から変化の内部分を抽出し、画像化する。
+
+    Args:
+        movie_file (str): 動画ファイルへのパス
+        output_dir (str): 画像を出力するディレクトリ
+        binalization_threshold (int, optional): 2値化のしきい値。この値未満は黒となる. Defaults to 30.
+        next_frame_pixel_threshold (int, optional): 2つの画像の変化量のしきい値. Defaults to 20_000.
+
+    Raises:
+        FileNotFoundError: movie_fileが存在しない時に投げられる。
+    """
     # th = 30    # 差分画像の閾値
 
     output_dir = Path(output_dir)
