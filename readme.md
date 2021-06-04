@@ -7,3 +7,7 @@
 ## 使い方
 `$ python -m pose_scene_picker <動画へのパス> <切り出した画像のフォルダ>`
 
+## 参考文献
+- OpenCVでフレーム間差分法を実装
+    - https://qiita.com/ProOJI/items/f38865917dd9abb4bb53
+
